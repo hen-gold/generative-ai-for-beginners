@@ -25,7 +25,8 @@ class TestEnvironmentSetup:
         """Test that openai package can be imported."""
         try:
             import openai
-            assert openai is not None
+            # Verify it has expected attributes
+            assert hasattr(openai, '__version__'), "openai module missing version"
         except ImportError:
             pytest.fail("openai package is not installed")
 
@@ -33,7 +34,8 @@ class TestEnvironmentSetup:
         """Test that python-dotenv package can be imported."""
         try:
             from dotenv import load_dotenv
-            assert load_dotenv is not None
+            # Verify it's callable
+            assert callable(load_dotenv), "load_dotenv is not callable"
         except ImportError:
             pytest.fail("python-dotenv package is not installed")
 
@@ -41,7 +43,8 @@ class TestEnvironmentSetup:
         """Test that numpy package can be imported."""
         try:
             import numpy
-            assert numpy is not None
+            # Verify it has expected attributes
+            assert hasattr(numpy, 'array'), "numpy module missing array function"
         except ImportError:
             pytest.fail("numpy package is not installed")
 
@@ -49,7 +52,8 @@ class TestEnvironmentSetup:
         """Test that pandas package can be imported."""
         try:
             import pandas
-            assert pandas is not None
+            # Verify it has expected attributes
+            assert hasattr(pandas, 'DataFrame'), "pandas module missing DataFrame"
         except ImportError:
             pytest.fail("pandas package is not installed")
 
@@ -57,7 +61,8 @@ class TestEnvironmentSetup:
         """Test that tiktoken package can be imported."""
         try:
             import tiktoken
-            assert tiktoken is not None
+            # Verify it has expected attributes
+            assert hasattr(tiktoken, 'encoding_for_model'), "tiktoken module missing encoding_for_model"
         except ImportError:
             pytest.fail("tiktoken package is not installed")
 
