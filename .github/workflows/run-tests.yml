@@ -12,6 +12,8 @@ jobs:
   test:
     name: Run Python Tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11']
