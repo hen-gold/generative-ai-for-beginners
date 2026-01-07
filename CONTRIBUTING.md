@@ -40,15 +40,41 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 - Ensure that all images are stored in the `./images` folder.
 - Ensure that the images have descriptive names using English characters, numbers, and dashes in the name of your image.
 
+## Testing
+
+This repository includes automated tests to validate the code structure and dependencies.
+
+### Running Tests Locally
+
+To run the tests locally:
+
+1. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the test suite:
+   ```bash
+   pytest tests/ -v
+   ```
+
+The tests validate:
+- Python version compatibility (3.9+)
+- Required package installations
+- Code structure and essential files
+
+All tests are designed to run without requiring API keys, enabling anonymous test conduction.
+
 ## GitHub Workflows
 
-When you submit a pull request, four different workflows will be triggered to validate the previous rules.
+When you submit a pull request, multiple workflows will be triggered to validate the previous rules.
 Simply follow the instructions listed here to pass the workflow checks.
 
 - [Check Broken Relative Paths](#check-broken-relative-paths)
 - [Check Paths Have Tracking](#check-paths-have-tracking)
 - [Check URLs Have Tracking](#check-urls-have-tracking)
 - [Check URLs Don't Have Locale](#check-urls-dont-have-locale)
+- **Run Tests** - Validates code structure and dependencies
 
 ### Check Broken Relative Paths
 
