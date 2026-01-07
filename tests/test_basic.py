@@ -10,6 +10,10 @@ import os
 import pytest
 
 
+# Helper constant for repository root directory
+REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
+
+
 class TestEnvironmentSetup:
     """Test that the environment is set up correctly."""
 
@@ -63,29 +67,20 @@ class TestCodeStructure:
 
     def test_env_copy_exists(self):
         """Verify that .env.copy template exists."""
-        env_copy_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            '.env.copy'
-        )
+        env_copy_path = os.path.join(REPO_ROOT, '.env.copy')
         assert os.path.exists(env_copy_path), ".env.copy template file is missing"
 
     def test_readme_exists(self):
         """Verify that main README.md exists."""
-        readme_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            'README.md'
-        )
+        readme_path = os.path.join(REPO_ROOT, 'README.md')
         assert os.path.exists(readme_path), "README.md file is missing"
 
     def test_requirements_file(self):
         """Verify that requirements.txt exists and is not empty."""
-        req_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            'requirements.txt'
-        )
+        req_path = os.path.join(REPO_ROOT, 'requirements.txt')
         assert os.path.exists(req_path), "requirements.txt file is missing"
         
-        with open(req_path, 'r') as f:
+        with open(req_path, 'r', encoding='utf-8') as f:
             content = f.read()
             assert len(content) > 0, "requirements.txt is empty"
             assert 'openai' in content, "openai dependency is missing"
