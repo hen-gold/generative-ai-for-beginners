@@ -49,6 +49,17 @@ We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic
 
 Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
 
+## 📖 Course Wiki
+
+Check out our comprehensive **[Course Wiki](./wiki/Home.md)** for:
+- 📚 Complete lesson guides with quick navigation
+- 🛠️ Detailed setup instructions
+- ❓ FAQ and troubleshooting
+- 📝 Glossary of AI terms
+- 🤝 Contributing guidelines
+
+The wiki provides an organized, easy-to-navigate view of all course content.
+
 ## 🧠 Ready to Deploy?
 
 If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) in both **Python** and **TypeScript**.
